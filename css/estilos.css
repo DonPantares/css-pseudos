@@ -1,0 +1,31 @@
+.caja{
+    color: rgb(255, 156, 25);
+    font-weight: 1000;
+    font-size: 22px;
+    height: 150px;
+    width: 100px; 
+    margin: 100px;
+    padding: 10px;
+    border: 3px double yellow;
+    display: inline-block;
+    border-top-left-radius: 20px;
+    box-sizing:border-box;
+    box-shadow:-10px -10px 5px cadetblue; 
+    
+}
+
+.caja1{
+    background-color: darkred;
+}
+.caja2{
+    background-color:navy;
+}
+.texto{
+    text-shadow: 10px 10px 7px aquamarine;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: lighter;
+    line-height: 1.5px;
+    font-family: "Arial";
+    text-align: center;
+}
