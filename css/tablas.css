@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+:root{
+    font-family: 'Open Sans', sans-serif;
+    --black: #000000;
+    --azul: #21618C;
+    --white: #FAFAFA;
+}
+.container{
+    width: 50%;
+    margin: 20px;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+.tdark thead{
+    color: var(--white);
+    background: var(--black);
+}
+.table th, td, tr{
+    padding: 0.55rem;
+    text-align: inherit;
+    border-bottom: .02px solid black;
+    transition: .05s ease;
+}
+.table tbody tr:nth-child(even){
+    background: #E5E7E9;
+    transition: .05s ease;
+}
+.table tbody tr:nth-child(even):hover{
+   background: #B3B6B7;
+}
+.table tbody tr:hover{
+    background: #D0D3D4;
+}
+  
