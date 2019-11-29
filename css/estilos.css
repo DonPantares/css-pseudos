@@ -1,31 +1,111 @@
-.caja{
-    color: rgb(255, 156, 25);
-    font-weight: 1000;
-    font-size: 22px;
+/*
+    Una pseudo clase en css es una palabra clave que se añade a los 
+    selectores y que especifica un estado especial del elemento seleccionado
+*/
+:root{
+    --fuente: 30px;
+    --color-primario: blue;
+}
+html{
+    width: 100%;
+    height: 100%;
+    font-size: var(--fuente);
+}
+/*
+    ELEMENTOS VACIOS(SIN HIJOS)
+        :empty => elementos vacios
+*/
+.texto:empty{
+    background-color: cadetblue;
+    height: 50px;
+}
+/*
+    ENLACES
+        :link => aplicar estilos a los enlaces que aun no fueron visitados
+        :visited => aplicar estilos a los enlaces que ya fueron visitados
+*/
+.enlace:link{
+    color: rgb(146, 43, 33);
+}   
+.enlace:visited{
+    color: rgb(40, 55, 71 );
+}
+/*
+    INTERACCIONES
+        :hover => interactúa con un elemento con un dispositivo señalador, pero no necesariamente lo activa.
+        :active => representa un elemento (como un botón) que el usuario está activando. 
+        :focus => foco del navegador
+*/
+p.texto:hover{
+    background: red;
+}
+button:hover{
+    background-color: royalblue;
+}
+button:active{
+    width: 100px;
     height: 150px;
-    width: 100px; 
-    margin: 100px;
-    padding: 10px;
-    border: 3px double yellow;
-    display: inline-block;
-    border-top-left-radius: 20px;
-    box-sizing:border-box;
-    box-shadow:-10px -10px 5px cadetblue; 
-    
+    background-color: silver;
+    box-sizing: border-box;
+}
+input[type="text"]:focus{
+    border-color: teal;
+    box-sizing: border-box;
+    border-radius: 20px;
+    height: 100px;
 }
 
-.caja1{
-    background-color: darkred;
+/*
+    ELEMENTOS HABILITADOS Y DESHABILITADOS
+        :enabled  => representa cualquier elemento habilitado. Un elemento está habilitado si puede ser activado o si accepta el foco
+        :disabled => Un elemento se encuentra deshabilitado si no puede ser activado
+        :checked => representa cualquier radio, checkbox u option que está marcado o conmutado a un estado on.
+*/
+input[type="text"]:enabled{
+    color: rgb(73, 250, 19);
 }
-.caja2{
-    background-color:navy;
+input[type="text"]:disabled{
+    background-color: rgb(14, 9, 9);
+    color: #ffffff;
 }
-.texto{
-    text-shadow: 10px 10px 7px aquamarine;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: lighter;
-    line-height: 1.5px;
-    font-family: "Arial";
-    text-align: center;
+input:checked + label {
+    color: red;
+}
+input[type="radio"]:checked {
+box-shadow: 0 0 0 3px orange;
+}
+input[type="checkbox"]:checked {
+    box-shadow: 0 0 0 3px hotpink;
+}
+option:checked {
+    box-shadow: 0 0 0 3px lime;
+    color: red;
+}
+/*
+    Validaciones
+        :required => inputs requeridos
+        :valid => validado
+*/
+input[type="text"]:required{
+    background: blueviolet;
+}
+input[type="text"]:valid{
+    background: blue;
+    color: whitesmoke;
+}
+input[type="text"]:invalid{
+    background: red;
+    color: whitesmoke;
+}
+/*
+    RANGO
+        :in-range => dentro del rango
+        :out-of-range => fuera del rango
+*/
+input[type="number"]:in-range{
+    background: greenyellow;
+}
+input[type="number"]:out-of-range{
+    background: indigo;
+    color: khaki;
 }
